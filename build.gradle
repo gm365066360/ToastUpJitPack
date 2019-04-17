@@ -1,0 +1,43 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+
+//        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+//        maven { url 'https://jitpack.io' }
+        //添加在此
+//        maven { url 'file:///C:/ide/work_space/repo/' }
+        //改动在此
+
+//        maven { url 'https://raw.githubusercontent.com/gm365066360/toastutil/master' }
+        maven { url 'https://jitpack.io' }
+
+
+//        https://github.com/gm365066360/toastutil
+//        复制出仓库当前界面的链接地址
+//        https://github.com/Geroff/MavenTest
+//        对其进行修改：
+//        https://raw.githubusercontent.com/Geroff/MavenTest/master
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
